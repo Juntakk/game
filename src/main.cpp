@@ -1,14 +1,16 @@
 #include <iostream>
 using namespace std;
 
-void myFunction(){
-   string x;
-   cout << "What's your name ?";
-   cin >> x;
-   cout << x;
+int factorial(int n) {
+  if (n > 1) {
+    cout << factorial(n-1) << "\n";
+    return n * factorial(n - 1);
+  } else {
+    return 1;
+  }
 }
 
 int main() {
-    myFunction();
-    return 0;
+  cout << "Factorial of 5 is " << factorial(5);
+  return 0;
 }
